@@ -1,13 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native';
-import MinMax from "./componentes/MinMax"
+import { StyleSheet, Text, View, Image } from 'react-native'
+import Bulhacha from './componentes/Bulhacha';
+
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Altere Aqui</Text>
+      <Bulhacha></Bulhacha>
+      {/*  <Text>Altere Aqui</Text>
       <StatusBar style="auto" />
-      <Image source={require('./assets/favicon.png')} />
+      <Image source={require('./assets/favicon.png')} />*/}
     </View>
   );
 }
@@ -15,7 +17,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'red',
+    backgroundColor: '#8d99ae',
     alignItems: 'center',
     justifyContent: 'center',
   },
