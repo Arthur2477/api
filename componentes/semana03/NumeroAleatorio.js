@@ -1,21 +1,13 @@
-import { StyleSheet,  Text, View} from 'react-native'
-import React from 'react'
+import React from 'react';
+import { Text } from 'react-native';
 
-export default function NumeroAleatorio(props){
+const NumeroAleatorio = ({ min, max }) => {
 
-    const {min, max} = props
+  const Number = Math.floor(Math.random() * (max - min + 1)) + min;
 
-    const delta = max - min
-    const NumeroAleatorio = Math.floor(Math.random() * delta) + min
+  return (
+    <Text>O número aleatório é: {Number}</Text>
+    );
+};
 
-
-  return(
-    <view>
-        <text style={{fontSize: 30}}>O numero aleatorio e:{NumeroAleatorio
-        
-        }</text>
-    </view>
-
-  )
-
-}
+export default NumeroAleatorio;

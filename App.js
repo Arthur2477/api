@@ -10,9 +10,11 @@ import MinMax from './componentes/MinMax';
 
 export default function App() {
   return (
+    
     <View style={styles.container}>
-      <MinMax min={20} max={10}/>
-      {/*<Profile></Profile>
+      <NumeroAleatorio min={1} max={35} />
+      {/*<MinMax min={20} max={10}/>
+      <Profile></Profile>
       <Bulhacha></Bulhacha>
        <Contador></Contador>
         <Text>Altere Aqui</Text>
