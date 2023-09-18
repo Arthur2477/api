@@ -1,12 +1,14 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React from 'react';
+import { View, Text } from 'react-native';
 
-export default function MinMax() {
+const MinMax = ({ min, max }) => {
+  const maiorValor = min > max ? min : max;
+
   return (
     <View>
-      <Text>MinMax</Text>
+      <Text>{maiorValor} é maior que {min === maiorValor ? max : min}</Text>
     </View>
-  )
-}
+  );
+};
 
-const styles = StyleSheet.create({})
+export default MinMax;

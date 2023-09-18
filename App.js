@@ -4,15 +4,18 @@ import Bulhacha from './componentes/Bulhacha';
 import Contador from './componentes/semana 4/Contador';
 import NumeroAleatorio from './componentes/semana03/NumeroAleatorio';
 import Profile from './componentes/semana03/Profile';
+import Minmax from './componentes/MinMax';
+import MinMax from './componentes/MinMax';
 
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Profile></Profile>
-      {/*<Bulhacha></Bulhacha>*/}
-       {/*<Contador></Contador>*/}
-      {/*  <Text>Altere Aqui</Text>
+      <MinMax min={20} max={10}/>
+      {/*<Profile></Profile>
+      <Bulhacha></Bulhacha>
+       <Contador></Contador>
+        <Text>Altere Aqui</Text>
       <StatusBar style="auto" />
       <Image source={require('./assets/favicon.png')} />*/}
     </View>
@@ -22,7 +25,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#00FFFF',
+    backgroundColor: 'grey',
     alignItems: 'center',
     justifyContent: 'center',
   },
