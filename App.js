@@ -1,34 +1,29 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image } from 'react-native'
-import Bulhacha from './componentes/Bulhacha';
-import Contador from './componentes/semana 4/Contador';
-import NumeroAleatorio from './componentes/semana03/NumeroAleatorio';
-import Profile from './componentes/semana03/Profile';
-import Minmax from './componentes/MinMax';
-import MinMax from './componentes/MinMax';
+import * as React from 'react';
+import { Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import UserScreen from './componentes/segundo bimestre/User';
+import PostScreen from './componentes/segundo bimestre/Posts';
 
-
-export default function App() {
+function HomeScreen() {
   return (
-    
-    <View style={styles.container}>
-      <NumeroAleatorio min={1} max={35} />
-      {/*<MinMax min={20} max={10}/>
-      <Profile></Profile>
-      <Bulhacha></Bulhacha>
-       <Contador></Contador>
-        <Text>Altere Aqui</Text>
-      <StatusBar style="auto" />
-      <Image source={require('./assets/favicon.png')} />*/}
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Text>User!</Text>
     </View>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: 'grey',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+
+
+const Tab = createBottomTabNavigator();
+
+export default function App() {
+  return (
+    <NavigationContainer>
+      <Tab.Navigator>
+        <Tab.Screen name="User" component={UserScreen} />
+        <Tab.Screen name="Post" component={PostScreen} />
+      </Tab.Navigator>
+    </NavigationContainer>
+  );
+}
